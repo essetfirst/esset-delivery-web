@@ -1,0 +1,128 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid #eaeaea;  */
+    /* box-shadow: 1px 1px 2px 0px #aeaeae;  */
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;   
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: small;
+}
+
+nav ul li a:hover {
+    color: #a6e845;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #efefef;
+    background-color: #eaeaea;
+}
+
+.searchbar {
+    padding: 10px 0;    
+    max-width: 350px;
+}
+
+.searchbar_input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    border: 1px solid #aaa;
+}
+
+#food_list {
+    margin-top: 20px;   
+}
+
+#food_list_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+}
+
+.food_item {
+  /* width: 100%;     */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 1px 1px 4px 1px #aaa; 
+}
+
+.food_image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.action_area {
+  display: flex;
+  justify-content: flex-end;
+  /* border: 2px solid #aaa; */
+  align-items: center;
+  padding: 8px 0;
+}
+
+.button {
+  border-radius: 4px;
+  outline: none;
+  background-color: #a6e845;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin: 0 5px;
+}
+
+.button:hover {
+  background-color: #f5f5f5;
+}

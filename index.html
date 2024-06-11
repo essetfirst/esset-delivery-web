@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EssetDelivery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <header class="container">
+        <div>
+            <h3 class="app_title">EssetDelivery</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href='/'>Favorites</a></li>
+                <li><a href='/services' oncl>Cart</a></li>
+                <!-- <li><a href='/about'>About</a></li> -->
+            </ul>
+            <div>
+                <div class="avatar">
+                    <p id="user_name"><script>document.getElementById("user_name").innerText = String(appState.user.name)[0]; </script></p>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="searchbar">
+            <input placeholder="Search food" class="searchbar_input" />
+        </div>
+        <section id="food_list">
+
+            <div id="food_list_grid">
+                <script>
+                    appState.foodItems.forEach(food => {
+                        const foodItem = document.createElement('div');
+                        foodItem.classList.add('food_item');
+                        foodItem.innerHTML = `
+                        <img src="${food.image}" alt="${food.name}" class="food_image" />
+                        <h2>${food.name}</h2>
+                        <p>Price: $${food.price}</p>
+                        <div class="action_area">
+                        <button class="button add_favorite_button">Add Fav</button>
+                        <button class="button add_to_cart_button">Add to cart</button>
+                        </div>
+                        `;
+                        document.getElementById('food_list_grid').appendChild(foodItem);
+                    });
+                </script>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <div>
+            <p>&copy; 2020 EssetDelivery</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
